@@ -88,24 +88,9 @@ namespace Dal
         {
             using(var _context = new BasicTutorialDalDataContext())
             {
+                //Hàm any cho phép chả vể true nếu có ít nhất 1 giá trị 
                 return _context.Table_users.Any(login => login.username == userDal && login.password == passDal);
             }
-        }
-        #endregion
-        #region CompareUser
-        public bool CompareUser(string usernameDal, string passwordDal)
-        {
-            //khởi  tạo datacontext
-            using(var _context = new BasicTutorialDalDataContext())
-            {
-                //Truy vấn cơ sở dữ liệu để kiểm tra
-                //xem có bản ghi nào khớp với tên người dùng và
-                //mật khẩu đã cho hay không.
-                //Hàm any cho phép chả vể true nếu có it nhất 1 giá trị 
-                return _context.Table_users.Any(user =>
-                user.username == usernameDal &&
-                user.password == passwordDal);
-            } 
         }
         #endregion
         #region User

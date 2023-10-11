@@ -33,5 +33,16 @@ namespace Dal.Properties {
                 return ((string)(this["Basic_TutorialConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=thqnhngqn\\THQNHNGQN;Initial Catalog=Detect_bienso;Integrated Security" +
+            "=True")]
+        public string Detect_biensoConnectionString {
+            get {
+                return ((string)(this["Detect_biensoConnectionString"]));
+            }
+        }
     }
 }

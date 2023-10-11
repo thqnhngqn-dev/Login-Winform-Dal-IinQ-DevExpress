@@ -52,7 +52,7 @@ namespace VNS_Tutorial2023
                         var userDal = new userDal();
 
                         // Kiểm tra xem người dùng đã tồn tại trong cơ sở dữ liệu hay chưa
-                        if (userDal.CompareUser(usernameTextEdit.Text, passwordTextEdit.Text))
+                        if (userDal.LoginUser(usernameTextEdit.Text, passwordTextEdit.Text))
                         {
                             msgBox.ShowWarning("Người dùng đã tồn tại. Vui lòng chọn tên người dùng khác.");
                         }
@@ -68,6 +68,13 @@ namespace VNS_Tutorial2023
                                 msgBox.ShowInfo("Đăng ký thành công");
 
                                 usernameTextEdit.Text = string.Empty;
+                                passwordTextEdit.Text = string.Empty;
+                                confirmPasswordTextEdit.Text = string.Empty;
+                                usernameTextEdit.Focus();
+                            }
+                            else
+                            {
+                                msgBox.ShowInfo("mật khẩu của bạn không trùng khớp");
                                 passwordTextEdit.Text = string.Empty;
                                 confirmPasswordTextEdit.Text = string.Empty;
                                 usernameTextEdit.Focus();

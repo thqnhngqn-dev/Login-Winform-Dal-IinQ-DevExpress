@@ -12,3 +12,10 @@ D:\dev\Winform\VNS_Tutorial2023\Dal\obj\Debug\Dal.csproj.AssemblyReference.cache
 D:\dev\Winform\VNS_Tutorial2023\Dal\obj\Debug\Dal.csproj.CoreCompileInputs.cache
 D:\dev\Winform\VNS_Tutorial2023\Dal\obj\Debug\Dal.dll
 D:\dev\Winform\VNS_Tutorial2023\Dal\obj\Debug\Dal.pdb
+D:\dev\Winform\VNS_Tutorial2023\VNS_Tutorial2023\Dal\bin\Debug\Dal.dll.config
+D:\dev\Winform\VNS_Tutorial2023\VNS_Tutorial2023\Dal\bin\Debug\Dal.dll
+D:\dev\Winform\VNS_Tutorial2023\VNS_Tutorial2023\Dal\bin\Debug\Dal.pdb
+D:\dev\Winform\VNS_Tutorial2023\VNS_Tutorial2023\Dal\obj\Debug\Dal.csproj.AssemblyReference.cache
+D:\dev\Winform\VNS_Tutorial2023\VNS_Tutorial2023\Dal\obj\Debug\Dal.csproj.CoreCompileInputs.cache
+D:\dev\Winform\VNS_Tutorial2023\VNS_Tutorial2023\Dal\obj\Debug\Dal.dll
+D:\dev\Winform\VNS_Tutorial2023\VNS_Tutorial2023\Dal\obj\Debug\Dal.pdb

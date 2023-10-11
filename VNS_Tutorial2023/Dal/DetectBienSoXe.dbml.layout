@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.5, 9.25" name="DetectBienSoXe">
+  <DataContextMoniker Name="/DetectBienSoXeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="613a75a8-42cc-458e-96bc-daab78dac959" absoluteBounds="3.75, 4.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DetectBienSoXeDataContext/access" />
+      <nestedChildShapes>
+        <elementListCompartment Id="849a9f02-bb8c-4c66-9c33-68113e8c21d5" absoluteBounds="3.765, 5.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="894d9e18-d0c5-4353-b08a-5f9cf41e2cc1" absoluteBounds="3.5, 6.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DetectBienSoXeDataContext/Action" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a00a58e9-cd51-42de-9e9b-1f503fc89b40" absoluteBounds="3.515, 7.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63b71650-2378-4a5d-96b7-75faeae8ebd9" absoluteBounds="6.5, 3.625, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/DetectBienSoXeDataContext/Ad_min" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05c2a181-3d4c-46d9-951c-343b65316bac" absoluteBounds="6.515, 4.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="069a649f-ce70-4ba6-9d23-8c65aa5f0fdb" absoluteBounds="3.5, 2.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DetectBienSoXeDataContext/Camera" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6823e36-10a2-4d6e-a140-9a10b2301413" absoluteBounds="3.515, 2.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0db5e391-7a47-4fc9-82c2-131088ca9859" absoluteBounds="9.5, 7.125, 2, 1.5785953776041657">
+      <DataClassMoniker Name="/DetectBienSoXeDataContext/Car" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df8ab525-ea3e-472d-8064-9e8525cf7203" absoluteBounds="9.515, 7.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b8575b9-e51a-4317-a8ff-f777260eec0d" absoluteBounds="6.75, 7, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/DetectBienSoXeDataContext/Driver" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5094893f-d7ce-4422-aac6-6b0c2e79e517" absoluteBounds="6.765, 7.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="29d3e6e1-f7e5-430f-87b4-7059940a5316" absoluteBounds="12.25, 6.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DetectBienSoXeDataContext/schedule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89f2f5bc-f782-41a8-9ecc-7816109e961b" absoluteBounds="12.265, 7.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e887fc9f-2a44-44bc-9f54-4e40ff415ec9" absoluteBounds="0.75, 3.875, 2, 1.193992513020834">
+      <DataClassMoniker Name="/DetectBienSoXeDataContext/Parking_lot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="868e5ba6-c594-448b-b421-8c296941ba2f" absoluteBounds="0.765, 4.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 5.13544840494792); (6.5 : 5.13544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DetectBienSoXeDataContext/access/access_Ad_min" />
+      <nodes>
+        <classShapeMoniker Id="613a75a8-42cc-458e-96bc-daab78dac959" />
+        <classShapeMoniker Id="63b71650-2378-4a5d-96b7-75faeae8ebd9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 7.91429768880208); (9.5 : 7.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DetectBienSoXeDataContext/Driver/Driver_Car" />
+      <nodes>
+        <classShapeMoniker Id="8b8575b9-e51a-4317-a8ff-f777260eec0d" />
+        <classShapeMoniker Id="0db5e391-7a47-4fc9-82c2-131088ca9859" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 7.91429768880208); (12.25 : 7.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DetectBienSoXeDataContext/Car/Car_schedule" />
+      <nodes>
+        <classShapeMoniker Id="0db5e391-7a47-4fc9-82c2-131088ca9859" />
+        <classShapeMoniker Id="29d3e6e1-f7e5-430f-87b4-7059940a5316" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.06899251302083); (1.75 : 7.95274983723958); (3.5 : 7.95274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DetectBienSoXeDataContext/Parking_lot/Parking_lot_Action" />
+      <nodes>
+        <classShapeMoniker Id="e887fc9f-2a44-44bc-9f54-4e40ff415ec9" />
+        <classShapeMoniker Id="894d9e18-d0c5-4353-b08a-5f9cf41e2cc1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.34375); (6.5 : 4.34375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DetectBienSoXeDataContext/Parking_lot/Parking_lot_Ad_min" />
+      <nodes>
+        <classShapeMoniker Id="e887fc9f-2a44-44bc-9f54-4e40ff415ec9" />
+        <classShapeMoniker Id="63b71650-2378-4a5d-96b7-75faeae8ebd9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.875); (3.5 : 3.56899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DetectBienSoXeDataContext/Parking_lot/Parking_lot_Camera" />
+      <nodes>
+        <classShapeMoniker Id="e887fc9f-2a44-44bc-9f54-4e40ff415ec9" />
+        <classShapeMoniker Id="069a649f-ce70-4ba6-9d23-8c65aa5f0fdb" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Detect_bienso" Class="DetectBienSoXeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=thqnhngqn\THQNHNGQN;Initial Catalog=Detect_bienso;Integrated Security=True" SettingsObjectName="Dal.Properties.Settings" SettingsPropertyName="Detect_biensoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.access" Member="accesses">
+    <Type Name="access">
+      <Column Name="id_access" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="access_Ad_min" Member="Ad_mins" ThisKey="id_access" OtherKey="Access_id" Type="Ad_min" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Action" Member="Actions">
+    <Type Name="Action">
+      <Column Name="ID_action" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_car" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="In_or_out" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Id_parkinglot" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Parking_lot_Action" Member="Parking_lot" ThisKey="Id_parkinglot" OtherKey="ID_parkinglot" Type="Parking_lot" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ad_min" Member="Ad_mins">
+    <Type Name="Ad_min">
+      <Column Name="Id_admin" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_parkinglot" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Access_id" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="access_Ad_min" Member="access" ThisKey="Access_id" OtherKey="id_access" Type="access" IsForeignKey="true" />
+      <Association Name="Parking_lot_Ad_min" Member="Parking_lot" ThisKey="Id_parkinglot" OtherKey="ID_parkinglot" Type="Parking_lot" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Camera" Member="Cameras">
+    <Type Name="Camera">
+      <Column Name="ID_camera" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_parking_lot" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Parking_lot_Camera" Member="Parking_lot" ThisKey="ID_parking_lot" OtherKey="ID_parkinglot" Type="Parking_lot" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Car" Member="Cars">
+    <Type Name="Car">
+      <Column Name="Id_car" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_driver" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Desciption" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Car_schedule" Member="schedules" ThisKey="Id_car" OtherKey="id_car" Type="schedule" />
+      <Association Name="Driver_Car" Member="Driver" ThisKey="Id_driver" OtherKey="ID_driver" Type="Driver" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Driver" Member="Drivers">
+    <Type Name="Driver">
+      <Column Name="ID_driver" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Driver_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Dateofbirth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Phone_Number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dia_Chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Driver_Car" Member="Cars" ThisKey="ID_driver" OtherKey="Id_driver" Type="Car" />
+    </Type>
+  </Table>
+  <Table Name="dbo.schedule" Member="schedules">
+    <Type Name="schedule">
+      <Column Name="id_schedule" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ngay" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="id_car" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="id_action" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="Car_schedule" Member="Car" ThisKey="id_car" OtherKey="Id_car" Type="Car" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parking_lot" Member="Parking_lots">
+    <Type Name="Parking_lot">
+      <Column Name="ID_parkinglot" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Parking_lot_Action" Member="Actions" ThisKey="ID_parkinglot" OtherKey="Id_parkinglot" Type="Action" />
+      <Association Name="Parking_lot_Ad_min" Member="Ad_mins" ThisKey="ID_parkinglot" OtherKey="Id_parkinglot" Type="Ad_min" />
+      <Association Name="Parking_lot_Camera" Member="Cameras" ThisKey="ID_parkinglot" OtherKey="ID_parking_lot" Type="Camera" />
+    </Type>
+  </Table>
+</Database>

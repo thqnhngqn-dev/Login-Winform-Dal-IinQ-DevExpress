@@ -47,6 +47,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BasicTutorialDal.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DetectBienSoXe.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetectBienSoXe.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -64,6 +69,14 @@
     </None>
     <None Include="BasicTutorialDal.dbml.layout">
       <DependentUpon>BasicTutorialDal.dbml</DependentUpon>
+    </None>
+    <None Include="DetectBienSoXe.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DetectBienSoXe.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DetectBienSoXe.dbml.layout">
+      <DependentUpon>DetectBienSoXe.dbml</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
