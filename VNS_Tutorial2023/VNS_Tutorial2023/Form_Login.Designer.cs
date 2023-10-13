@@ -1,4 +1,9 @@
-﻿namespace VNS_Tutorial2023
+﻿using DevExpress.XtraBars.Docking2010.Customization;
+using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
+using DevExpress.XtraEditors;
+using System.Windows.Forms;
+
+namespace VNS_Tutorial2023
 {
     partial class Form_Login
     {
@@ -44,8 +49,8 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.realTimer = new System.Windows.Forms.Timer(this.components);
             this.timerLable = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.realTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).BeginInit();
@@ -73,7 +78,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(628, 0, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(358, 171);
+            this.layoutControl1.Size = new System.Drawing.Size(358, 176);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -140,7 +145,7 @@
             this.layoutControlItem5,
             this.timerLable});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(358, 171);
+            this.Root.Size = new System.Drawing.Size(358, 176);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -166,7 +171,7 @@
             this.layoutControlItem3.Control = this.btnLogin;
             this.layoutControlItem3.Location = new System.Drawing.Point(83, 104);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(83, 41);
+            this.layoutControlItem3.Size = new System.Drawing.Size(83, 46);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -175,7 +180,7 @@
             this.layoutControlItem4.Control = this.btnCancel;
             this.layoutControlItem4.Location = new System.Drawing.Point(166, 104);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(82, 41);
+            this.layoutControlItem4.Size = new System.Drawing.Size(82, 46);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -184,7 +189,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 104);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(83, 41);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(83, 46);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
@@ -192,7 +197,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(248, 104);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(84, 41);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(84, 46);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
@@ -218,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 171);
+            this.ClientSize = new System.Drawing.Size(358, 176);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Form_Login.IconOptions.SvgImage")));
@@ -227,7 +232,6 @@
             this.Text = "Log in to system";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();

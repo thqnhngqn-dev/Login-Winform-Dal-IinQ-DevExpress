@@ -1,4 +1,6 @@
 ﻿using Dal;
+using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
+using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Mask;
 using System;
 using System.Data.SqlClient;
@@ -32,7 +34,7 @@ namespace VNS_Tutorial2023
             this.realTimer.Interval = 1000;
             this.realTimer.Tick += RealTimer_Tick;
         }
-
+        
         private void RealTimer_Tick(object sender, EventArgs e)
         {
             //cấu hình biến lockoutTime ở events login tăng 1 phút nếu login sai quá 5 lần 
@@ -113,6 +115,7 @@ namespace VNS_Tutorial2023
                             if (userDal.User(UsernameTextEdit.Text) && userDal.PassWord(PasswordTextEdit.Text))
                             {
                                 msgBox.ShowWarning("Tài khoản hoặc mật khẩu không chính xác");
+                                //msgBox.AlertControls("New message","ahihi","Tài khoản hoặc mật khẩu không chính xác");
                             }
                             else
                             {

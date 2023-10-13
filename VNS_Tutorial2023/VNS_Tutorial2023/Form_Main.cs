@@ -35,5 +35,6 @@ namespace VNS_Tutorial2023
             int barItemIndex = barSubItemNavigation.ItemLinks.IndexOf(e.Link);
             navBarControl.ActiveGroup = navBarControl.Groups[barItemIndex];
         }
+
     }
 }

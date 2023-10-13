@@ -1,4 +1,6 @@
 ﻿using DevExpress.Utils.Html;
+using DevExpress.XtraBars.Docking2010.Customization;
+using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
 using System;
@@ -11,6 +13,7 @@ namespace VNS_Tutorial2023
 {
      public class MsgBox
     {
+		
         public void ShowInfo(string messageText)
         {
             string html = @"<div class=""frame"" id=""frame"">
@@ -564,6 +567,152 @@ namespace VNS_Tutorial2023
 				return true;
 			}
 			return false;
+		}
+		
+		public void AlertControls(string alertControls, string caption, string text)
+		{
+			// Faild
+			string html = @"<div class=""container"">
+								<div class=""popup"">
+    								<div class=""header"">
+    									<div class=""header-caption"">
+    										<img src=""../img/Info.svg"" class=""header-caption-icon"" />
+    										<div class=""header-caption-text"">" + string.Format("{0}", alertControls) + @"</div>
+    									</div>
+    									<div class=""header-buttons"">
+    										<div id=""closeButton"" class=""header-button"">
+    											<img src=""../img/Close.svg"" class=""close-button"" />
+    										</div>
+    									</div>
+    								</div>
+    								<div class=""message"">
+    									<div class=""message-image-container"">
+	    									<img src=""../img/User.svg"" class=""message-image"" />
+    									</div>
+    									<div class=""message-text-container"">
+    										<div class=""message-caption"">" + string.Format("{0}",caption) +@"</div>
+    										<div class=""message-text"">" + string.Format("{0}", text)+ @"</div>
+    									</div>
+    								</div>
+    								<div class=""buttons"">
+    									<div class=""button"">Reply</div>
+    									<div class=""button"">Mark as read</div>
+    								</div>
+								</div>
+							</div>";
+			string css = @"
+						.container{
+							padding: 6px 14px 20px 14px;
+						} 
+						.popup{
+							width: 362px;
+							height: auto;
+							padding: 4px;
+							border-radius: 4px;
+							box-shadow: 0px 8px 16px rgba(0,0,0,0.25);
+							border: 1px solid @WindowText/0.2;
+							display: flex;
+							flex-direction: column;
+							font-family: ""Segoe UI"";
+							text-align: center;
+							justify-content: space-around;
+							background-color: @Control;
+							color: @ControlText;
+							font-size: 10pt;
+						}
+						.header{
+							display: flex;
+							flex-direction: row;
+							justify-content: space-between;
+							font-family: 'Segoe UI Semibold';
+						}
+						.header-caption{
+							padding: 10px 10px 0px 10px;
+							display: flex;
+							flex-direction: row;
+						}
+						.header-caption-icon{
+							width: 18px;
+							height: 18px;
+						}
+						.header-caption-text{
+							padding-left: 10px;
+						}
+						.header-buttons{
+							display: flex;
+							flex-direction: row;
+							padding: 5px 2px 0px 0px;
+						}
+						.header-button{
+							padding: 5px;
+							border-radius: 2px;
+							align-self: center;
+						}
+						.header-button:hover{
+							background-color: @HotTrackedColor/0.9;
+						}
+						.header-button:active{
+							background-color: @HotTrackedColor/0.6;
+						}
+						.close-button{
+							width: 18px;
+							height: 18px;
+						}
+						.message{
+							display: flex;
+							flex-direction: row;
+						}
+						.message-text-container{
+							text-align: left;
+							padding: 10px;
+						}
+						.message-image-container{
+							align-self: center;
+							padding: 9px;
+						}
+						.message-image{
+							width: 54px;
+							height: 54px;
+						}
+						.message-caption{
+							font-size: 10.5pt;
+							font-family: 'Segoe UI Semibold';
+						}
+						.message-text{
+						}
+						.buttons{
+							display: flex;
+							flex-direction: row;
+							justify-content: space-between;
+						}
+						.button{
+							margin: 9px;
+							padding: 8px;
+							width: 100%;
+							border-radius: 4px;
+							box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+							background-color: @Window;
+							color: @WindowText;
+							font-size: 10.5pt;
+							font-family: 'Segoe UI Semibold';
+							border: 1px solid @WindowText/0.1;
+    
+						}
+						.button:hover{
+							background-color: @HotTrackedColor/0.9;
+							color: @HotTrackedForeColor;
+							border: 1px solid @HotTrackedForeColor/0.2;
+						}
+						.button:active{
+							background-color: @HotTrackedColor/0.6;
+						}";
+			XtraMessageBoxArgs xtraMessageBoxArgs = new XtraMessageBoxArgs();
+			xtraMessageBoxArgs.HtmlTemplate.Assign(new HtmlTemplate()
+			{
+				Template = html,
+				Styles = css,
+			});
+			XtraMessageBox.Show(xtraMessageBoxArgs);
 		}
     }
 }
